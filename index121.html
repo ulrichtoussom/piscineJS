@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        body{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form id="monFormulaire">
+        <div class="mb-3 container">
+            <input type="text" class="form-control" id="nom" name="username" placeholder="Nom" required>
+        </div>
+        <div class="mb-3 container"> 
+            <input class="form-control mb-2" type="email" id="email" name="email" placeholder="Email" required>
+            <button class="btn btn-primary"  type="submit">Envoyer</button>
+        </div>
+
+       
+    </form>
+    <div id="message"></div>
+
+    <script src="exercice121.js"></script>
+</body>
+</html>
