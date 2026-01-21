@@ -1,0 +1,11 @@
+let nombreSecret = 42;
+let essai = 0;
+let compteur = 0;
+
+while (essai !== nombreSecret) {
+    essai++;
+    compteur++;
+}
+
+console.log(`Nombre trouvé : ${essai}`);
+console.log(`Nombre d'essais nécessaires : ${compteur}`);
