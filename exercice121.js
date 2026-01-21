@@ -2,16 +2,21 @@
 /** @type { HTMLFormElement} */
 const form =  document.querySelector('#monFormulaire')
 
-console.log(form)
-form.addEventListener('submit', (event) => {
+
+form.addEventListener('submit', (event)=>{
 // Empecher la div de se recharger 
-    event.preventDefault()
+    event.preventDefault()  
+   
+    const oldStatus = document.querySelector('.form-status')
+    if(oldStatus){
+        oldStatus.remove()
+    }
 // recuperation des donnee envoye par le formulaire 
-    formData = new FormData(form)
+    const formData = new FormData(form)
 
 // creation de la div d'affiche du status d'envoie 
     const divStatus = document.createElement('div')
-    divStatus.classList.add(...['alert', 'alert-success', 'container'])
+    divStatus.classList.add(...['alert', 'alert-success', 'container' , 'form-status'])
     divStatus.textContent = `Formulaire soumis ! Nom: ${formData.get('username')}, Email: ${formData.get('email')}`
 // Insertion de la divSatut
     /** @type {HTMLBodyElement} */
